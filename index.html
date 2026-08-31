@@ -173,9 +173,14 @@ img,svg{max-width:100%;display:block}
 
 /* WHY CARDS */
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:4px;padding:26px 22px}
-.why-card .why-icon{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.why-card .why-icon svg{width:19px;height:19px;fill:none;stroke:#E9C9A9;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why-card{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:4px;padding:26px 22px}
+.card-more-link{position:absolute;top:16px;right:18px;z-index:2;display:inline-flex;align-items:center;justify-content:center;padding:5px 16px;border-radius:20px;border:1px solid rgba(217,190,140,.5);background:rgba(176,141,87,.14);text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card-more-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(176,141,87,.32);border-color:rgba(217,190,140,.9)}
+.card-more-text{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:linear-gradient(90deg,#B08D57 0%,#F0DEB5 25%,#D9BE8C 50%,#F0DEB5 75%,#B08D57 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerGold 2.8s linear infinite}
+@keyframes shimmerGold{0%{background-position:250% 0}100%{background-position:-250% 0}}
+
+.why-card .why-icon{position:relative;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,rgba(176,141,87,.32),rgba(217,190,140,.22));border:1px solid rgba(217,190,140,.45);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-card .why-icon svg{width:19px;height:19px;fill:none;stroke:#FBEFD9;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;position:relative;z-index:1}
 .why-card h4{color:#fff;font-size:16px;margin-bottom:9px;font-family:'DM Sans',sans-serif;font-weight:700}
 .why-card p{font-size:13px;color:rgba(255,255,255,.72)}
 @media(max-width:900px){.why-grid{grid-template-columns:1fr 1fr}}
@@ -503,6 +508,9 @@ footer{background:var(--bordeaux-dark);color:rgba(255,255,255,.7);padding:64px 0
             <p>Mavrud, Rubin et Melnik côtoient des variétés internationales, pour une palette de goûts vraiment singulière.</p>
           </div>
           <div class="why-card reveal" style="transition-delay:0.07s">
+            <a class="card-more-link" href="nos-fournisseurs.html" aria-label="Voir plus sur nos domaines partenaires">
+              <span class="card-more-text">Voir +</span>
+            </a>
             <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-7 7 7v11M9 21v-6h6v6"/></svg></div>
             <h4>Domaines partenaires reconnus</h4>
             <p>Nous travaillons notamment avec Medi Valley Winery, notre fournisseur principal dans la vallée thrace.</p>
@@ -513,6 +521,9 @@ footer{background:var(--bordeaux-dark);color:rgba(255,255,255,.7);padding:64px 0
             <p>Chaque cuvée est sélectionnée et dégustée directement auprès de nos domaines partenaires en Bulgarie.</p>
           </div>
           <div class="why-card reveal" style="transition-delay:0.21s">
+            <a class="card-more-link" href="notre-histoire.html" aria-label="Voir plus sur notre histoire">
+              <span class="card-more-text">Voir +</span>
+            </a>
             <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg></div>
             <h4>Une histoire portée par la passion</h4>
             <p>Fondée par Zlatka Damatova Crier, La Cave Thrace fait découvrir sa région natale et son patrimoine viticole.</p>
